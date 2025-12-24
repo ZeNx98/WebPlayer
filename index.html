@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html style="margin:0; height:100%; overflow:hidden; background:black;">
+<body>
+  <video id="vid" controls style="width:100vw; height:100vh; object-fit:contain;"></video>
+  <script>
+    // Get the 'url' parameter from the address bar
+    const params = new URLSearchParams(window.location.search);
+    const videoUrl = params.get('v'); 
+    
+    if(videoUrl) {
+      document.getElementById('vid').src = videoUrl;
+    }
+  </script>
+</body>
+</html>
